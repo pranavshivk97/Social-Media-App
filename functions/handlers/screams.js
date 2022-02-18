@@ -131,7 +131,7 @@ exports.likeScream = (req, res) => {
                     userHandle: req.user.handle
                 })
                 .then(() => {
-                    screamData.likeCount++
+                    screamData.likeCount++; 
                     return screamDocument.update({ likeCount: screamData.likeCount });
                 })
                 .then(() => {
